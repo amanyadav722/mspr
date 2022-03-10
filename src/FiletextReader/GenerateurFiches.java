@@ -45,7 +45,7 @@ public class GenerateurFiches{
             PrintWriter out = new PrintWriter(bw))
            
             {
-            bw.write("<html><head><title>FICHE AGENT</title></head><body style=background-color:#379EC1;><div><div><span style=border:3px solid black;padding: 10px;>"+nom+" "+prenom+"</span></div><div align=right><img src=img/cberthier.jpg width=450 height=300></div></div><br><br><br><h1></h1><div style=text-align:center><label>"+equpmt1+"</label><input type=checkbox><br><label>"+equpmt2+"</label><input type=checkbox><br><label>"+equpmt3+"</label><input type=checkbox><br></div></body></html>");
+            bw.write("<html><head><title>FICHE AGENT</title></head><body style=background-color:#379EC1;><div><div><span style=border:3px solid black;padding: 10px;>"+nom+" "+prenom+"</span></div><div align=right><img src=img/"+username+".jpg width=450 height=300></div></div><br><br><br><h1></h1><div style=text-align:center><label>"+equpmt1+"</label><input type=checkbox><br><label>"+equpmt2+"</label><input type=checkbox><br><label>"+equpmt3+"</label><input type=checkbox><br></div></body></html>");
             bw.close();
             }catch (IOException e) {}
 
