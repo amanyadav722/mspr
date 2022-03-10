@@ -1,9 +1,23 @@
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+    agent none
+
+    environment {
+        DOCKER_HUB_USERNAME = credentials('DOCKER_USERNAME')
+        DOCKER_HUB_PASSWORD = credentials('DOCKER_HUB_TOKEN')
+        CURRENT_COMMIT = getCommitHash()
+    }
+
     stages {
-        stage('build') {
+        stage('Application Test') {
+            agent {
+                docker {
+                    image 'openjdk:17'
+                    args '-v $HOME/.m2:/root/.m2'
+                }
+            }
             steps {
-                sh 'mvn --version'
+                sh "echo 'Lancement de l'application'"
+                sh 'java .jar /Users/hp/Documents/ConnectorMspr.jar'
             }
         }
     }
