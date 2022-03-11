@@ -55,11 +55,18 @@ steps {
 echo 'Building..'
 }
 }
-stage('Test') {
+stage('Unit Test') {
 steps {
 echo 'Testing..'
 }
 }
+      
+stage('e2e Test') {
+steps {
+echo 'Testing..'
+}
+}
+      
 stage('Deploy') {
 steps {
 echo 'Deploying....'
