@@ -57,13 +57,13 @@ echo 'Building..'
 }
 stage('Unit Test') {
 steps {
-echo 'Testing..'
+echo 'Unit Testing..'
 }
 }
       
 stage('e2e Test') {
 steps {
-echo 'Testing..'
+echo 'e2e Testing..'
 }
 }
       
