@@ -21,6 +21,7 @@ pipeline {
         }
     }
 }
+<<<<<<< HEAD:jenkinsfile
 
 
 
@@ -31,3 +32,5 @@ pipeline {
 
 sh "echo 'Lancement de l'application'"
                 sh 'java .jar /Users/hp/Documents/ConnectorMspr.jar'
+=======
+>>>>>>> 0225654a6d669dcd950ca51ac754ee94805231e4:Jenkinsfile
